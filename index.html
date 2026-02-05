@@ -5,38 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saman Sultani - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <img src="profilbild.jpg" alt="Bild på mig" class="profile-pic">
+<div class="main-wrapper">
+    <div class="container">
+        <img src="profilbild.jpg" alt="Bild på mig" class="profile-pic">
 
-    <h1>Hej, jag heter Saman!</h1>
-    <p class="bio">
-        Jag älskar logik och att förstå vad som är i bakgrunden och styr!
-        Just nu letar jag efter nya utmaningar.
-    </p>
+        <h1>Hej, jag heter Saman!</h1>
+        <p class="bio">
+            Jag ser utvecklaryrket precis som hantverkaryrket, men skillnaden är att det inte finns några fysiska begränsningar.
+            Det enda som sätter gränsen är fantasin och beslutet att inte skriva kod. Jag älskar dessutom logik och är väldigt nyfiken på att förstå vad som händer "under huven".
+        </p>
 
-    <div class="links">
-        <a href="https://github.com/smanzzz" target="_blank">Min GitHub</a>
-        <a href="https://linkedin.com/in/saman-sultani-a48534197" target="_blank">Min LinkedIn</a>
-        <a href="mailto:smanzhow@gmail.com">Kontakta mig</a>
-    </div>
+        <div class="links">
+            <a href="https://github.com/smanzzz" target="_blank" class="btn">GitHub</a>
+            <a href="https://linkedin.com/in/saman-sultani-a48534197" target="_blank" class="btn">LinkedIn</a>
+            <a href="mailto:smanzhow@gmail.com" class="btn btn-primary">Maila mig</a>
+        </div>
 
-    <div class="cv-section">
-        <h2>Kort om mina tidigare erfarenheter</h2>
-        <ul>
-            <li><strong>Utbildning:</strong> Javautvecklare, Jensen Yrkeshögskola</li>
-            <li><strong>Projekt:</strong> Social Network API (Spring Boot, PostgreSQL)</li>
-            <li><strong>Färdigheter:</strong> Java, SQL, Docker, API-design</li>
-            <ul>
-            <h2>Tidigare erfarenheter</h2>
-                <li><strong>Serviceelektriker:</strong> I 3 år, </li>
-                <li><strong>Tidningsbud:</strong> Under somrarna när jag studerat till elektriker och Javautvecklare.</li>
+        <hr class="divider">
+
+        <div class="content-section">
+            <h2>Erfarenheter</h2>
+            <ul class="experience-list">
+                <li>
+                    <strong>Serviceelektriker (3 år):</strong>
+                    En givande tid där jag lärde mig problemlösning i fysiska miljöer hos
+                    <a href="https://lyckholmsel.se" target="_blank" class="highlight-link">Lyckholms El</a>.
+
+                </li>
+                <li>
+                    <strong>Tidningsbud:</strong>
+                    Sommarjobb som jag haft parallellt med mina studier till elektriker och Javautvecklare.
+                </li>
             </ul>
+        </div>
 
-        </ul>
+        <div class="content-section">
+            <h2>Vid sidan av koden</h2>
+            <p>
+                För att tala kroppens språk tror jag att man behöver röra på sig, därför har jag som rutin att jogga varje dag,
+                oavsett väder. Det hjälper mig att rensa tankarna och göra resten av livet klarare och lättare.
+            </p>
+        </div>
+
+        <div class="content-section idol-section">
+            <h2>Inspiration & Förebilder</h2>
+            <p>
+                Just nu hämtar jag min största drivkraft från min goda vän
+                <a href="https://aleksanderpantic.se" target="_blank" class="highlight-link">Aleksander Pantic</a>,
+                som är en stor källa till inspiration. Även <strong>David Goggins</strong> är en stor förebild när det gäller mentalitet.
+            </p>
+
+            <h3>Andra viktiga förebilder</h3>
+            <p class="small-text">Personer som format min syn på mentalitet träning och dedikation:</p>
+            <div class="tag-container">
+                <span class="tag">Kai Greene</span>
+                <span class="tag">Arnold Schwarzenegger</span>
+                <span class="tag">Ronnie Coleman</span>
+                <span class="tag">Fouad Abiad</span>
+            </div>
+        </div>
     </div>
 </div>
 
