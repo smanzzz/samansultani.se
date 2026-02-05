@@ -22,10 +22,13 @@ body {
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Gör bilden rund */
+    border-radius: 50%;
     object-fit: cover;
     border: 4px solid #6c5ce7;
     margin-bottom: 1rem;
+
+
+    transform: rotate(90deg);
 }
 
 h1 { margin-bottom: 0.5rem; }
