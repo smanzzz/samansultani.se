@@ -1,103 +1,132 @@
-
 body {
     font-family: 'Roboto', sans-serif;
-
     background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%);
     color: #2d3436;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+.main-wrapper {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
 .container {
     background: white;
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    text-align: center;
-    max-width: 480px;
     width: 100%;
-    transition: transform 0.3s ease;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
+/* --- GRID LAYOUT --- */
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1 del vänster, 2 delar höger */
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 40px;
+}
 
-.profile-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+.left-profile-column {
+    text-align: left;
+}
+
+.right-content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Stor bild */
+.profile-pic-large {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
     object-fit: cover;
-    border: 5px solid white; /* Vit ram runt bilden */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    margin-bottom: 1.5rem;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s;
+    margin-bottom: 25px;
+    display: block;
 }
 
-.profile-pic:hover {
-    transform: scale(1.05);
+.profile-pic-large:hover {
+    transform: scale(1.02);
 }
 
-
+/* --- TYPOGRAFI --- */
 h1 {
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    font-weight: 900;
     color: #2d3436;
+    font-size: 3rem;
+    line-height: 1.1;
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     color: #636e72;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
+    border-left: 5px solid #6c5ce7;
+    padding-left: 15px;
+    text-align: left;
 }
 
 h3 {
-    font-size: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #b2bec3;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    color: #2d3436;
+    font-weight: 700;
 }
 
 .bio {
     color: #636e72;
     margin-bottom: 2rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.1rem;
 }
 
-
+/* --- KNAPPAR --- */
 .links {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    margin-bottom: 2rem;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .btn {
     text-decoration: none;
     color: #2d3436;
     background-color: #f1f2f6;
-    padding: 10px 20px;
-    border-radius: 25px; /* Runda knappar */
-    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
     transition: all 0.3s ease;
+    font-size: 0.95rem;
     border: 1px solid transparent;
 }
 
 .btn:hover {
     background-color: #dfe6e9;
-    transform: translateY(-2px); /* Knappen hoppar upp lite */
+    transform: translateY(-2px);
 }
 
 .btn-primary {
     background-color: #6c5ce7;
     color: white;
-    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
 }
 
 .btn-primary:hover {
@@ -105,29 +134,12 @@ h3 {
     color: white;
 }
 
-
 .divider {
     border: 0;
     height: 1px;
     background: #dfe6e9;
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
-
-
-.content-section {
-    text-align: left;
-    margin-bottom: 2rem;
-}
-
-.experience-list {
-    padding-left: 20px;
-    line-height: 1.6;
-}
-
-.experience-list li {
-    margin-bottom: 10px;
-}
-
 
 .highlight-link {
     color: #6c5ce7;
@@ -141,29 +153,120 @@ h3 {
     border-bottom-color: #6c5ce7;
 }
 
-.small-text {
-    font-size: 0.95rem;
-    color: #636e72;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-
-.tag-container {
+/* --- STRAVA --- */
+.strava-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 25px;
+    margin-top: 25px;
 }
 
-.tag {
-    background-color: #f5f6fa;
-    color: #636e72;
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid #dfe6e9;
+.strava-box {
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
 }
-.spaced-title {
-    margin-top: 2.5rem;
+
+.strava-label {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #636e72;
+    text-align: center;
+}
+
+.strava-widget {
+    border: none;
+    overflow: hidden;
+    width: 100%;
+    height: 454px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    display: block;
+}
+
+/* --- TIDSLINJE & BOTTEN --- */
+.full-width-section {
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 10px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 0;
+    width: 3px;
+    background: #dfe6e9;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 50px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #6c5ce7;
+}
+
+.timeline-item.future::before {
+    background: #6c5ce7;
+    box-shadow: 0 0 0 5px rgba(108, 92, 231, 0.2);
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: #a4b0be;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+iframe, img {
+    max-width: 100%;
+}
+
+/* --- MOBILANPASSNING --- */
+@media (max-width: 950px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .left-profile-column {
+        text-align: center;
+    }
+
+    .profile-pic-large {
+        margin: 0 auto 25px auto;
+    }
+
+    .links {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
 }

@@ -5,70 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saman Sultani - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="main-wrapper">
     <div class="container">
-        <img src="profilbild.jpg" alt="Bild på mig" class="profile-pic">
 
-        <h1>Hej, jag heter Saman!</h1>
-        <p class="bio">
-            Jag ser utvecklaryrket precis som hantverkaryrket, men skillnaden är att det inte finns några fysiska begränsningar.
-            Det enda som sätter gränsen är fantasin och beslutet att inte skriva kod. Jag älskar dessutom logik och är väldigt nyfiken på att förstå vad som händer "under huven".
-        </p>
+        <div class="intro-grid">
 
-        <div class="links">
-            <a href="https://github.com/smanzzz" target="_blank" class="btn">GitHub</a>
-            <a href="https://linkedin.com/in/saman-sultani-a48534197" target="_blank" class="btn">LinkedIn</a>
-            <a href="mailto:smanzhow@gmail.com" class="btn btn-primary">Maila mig</a>
+            <div class="left-profile-column">
+                <h1>Hej och välkommen, jag heter Saman</h1>
+
+                <img src="profilbild.jpg" alt="Bild på mig" class="profile-pic-large">
+
+                <p class="bio">
+                    Jag ser utvecklaryrket precis som hantverkaryrket, men skillnaden är att det inte finns några fysiska begränsningar.
+                    Det enda som sätter gränsen är fantasin och beslutet att inte skriva kod.
+                </p>
+            </div>
+
+            <div class="right-content-column">
+
+                <div class="links">
+                    <a href="https://github.com/smanzzz" target="_blank" class="btn">GitHub</a>
+                    <a href="https://linkedin.com/in/saman-sultani-a48534197" target="_blank" class="btn">LinkedIn</a>
+                    <a href="mailto:smanzhow@gmail.com" class="btn btn-primary">Maila mig</a>
+                </div>
+
+                <div class="strava-section">
+                    <h2>Vid sidan av koden</h2>
+                    <p>
+                        För att tala kroppens språk tror jag att man behöver röra på sig, därför har jag som rutin att jogga varje dag,
+                        oavsett väder. Det hjälper mig att rensa tankarna och göra resten av livet klarare och lättare.
+                    </p>
+
+                    <div class="strava-wrapper">
+                        <div class="strava-box">
+                            <p class="strava-label">Senaste aktiviteterna</p>
+                            <iframe
+                                    class="strava-widget"
+                                    src="https://www.strava.com/athletes/137156002/latest-rides/579de71fc0751a9cf396c79345c8e52843778a8f"
+                                    loading="lazy"
+                                    title="Senaste aktiviteter">
+                            </iframe>
+                        </div>
+
+                        <div class="strava-box">
+                            <p class="strava-label">Veckans översikt</p>
+                            <iframe
+                                    class="strava-widget"
+                                    style="height: 160px;"
+                                    src="https://www.strava.com/athletes/137156002/activity-summary/579de71fc0751a9cf396c79345c8e52843778a8f"
+                                    loading="lazy"
+                                    title="Aktivitetssammanfattning">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <hr class="divider">
+
+        <div class="content-section full-width-section">
+            <h2>Erfarenheter & Framtid</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item future">
+                    <div class="timeline-date">Oktober 2026 (Kommande)</div>
+                    <h3>LIA Praktik</h3>
+                    <p>
+                        Just nu bygger jag upp min portfolio och förbereder mig inför min LIA i oktober.
+                        (Lärande i arbete.)
+                    </p>
+                </div>
+
+                <div class="timeline-item future">
+                    <div class="timeline-date">2025/08 - 2026/02</div>
+                    <h3>I skrivande stund</h3>
+                    <p>
+                        Just nu bygger jag upp min portfolio och samlar på mig så mycket kunskap och erfarenhet jag kan.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2025/05 - 2025/08</div>
+                    <h3>Tidningsbud</h3>
+                    <p>
+                        Hos VTD.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - 2025/05</div>
+                    <h3>Studier och jobb</h3>
+                    <p>
+                        Under denna tiden studerade jag en del kurser såsom matte 3b, Sv3, kemi 1, och påbörjade
+                        även Automationsprogrammering samtidigt som jag levererade bilar åt Flovi.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2021/05 - 2023-11</div>
+                    <h3>Serviceelektriker</h3>
+                    <p>
+                        En givande tid där jag lärde mig problemlösning i fysiska miljöer hos
+                        <a href="https://lyckholmsel.se" target="_blank" class="highlight-link">Lyckholms El</a>.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Sommarjobb</div>
+                    <h3>Tidningsbud</h3>
+                    <p>
+                        Sommarjobb som jag haft parallellt med mina studier till elektriker och Javautvecklare.
+                    </p>
+                </div>
+
+            </div>
         </div>
 
-        <hr class="divider">
-
-        <div class="content-section">
-            <h2>Erfarenheter</h2>
-            <ul class="experience-list">
-                <li>
-                    <strong>Serviceelektriker (3 år):</strong>
-                    En givande tid där jag lärde mig problemlösning i fysiska miljöer hos
-                    <a href="https://lyckholmsel.se" target="_blank" class="highlight-link">Lyckholms El</a>.
-
-                </li>
-                <li>
-                    <strong>Tidningsbud:</strong>
-                    Sommarjobb som jag haft parallellt med mina studier till elektriker och Javautvecklare.
-                </li>
-            </ul>
-        </div>
-
-        <div class="content-section">
-            <h2>Vid sidan av koden</h2>
-            <p>
-                För att tala kroppens språk tror jag att man behöver röra på sig, därför har jag som rutin att jogga varje dag,
-                oavsett väder. Det hjälper mig att rensa tankarna och göra resten av livet klarare och lättare.
-            </p>
-        </div>
-
-        <div class="content-section idol-section">
+        <div class="content-section full-width-section idol-section">
             <h2>Inspiration & Förebilder</h2>
             <p>
                 Just nu hämtar jag min största drivkraft från min goda vän
-                <a href="https://aleksanderpantic.se" target="_blank" class="highlight-link">Aleksander Pantic</a>,
-                som är en stor källa till inspiration. Även <strong>David Goggins</strong> är en stor förebild när det gäller mentalitet.
+                <a href="https://aleksanderpantic.se" target="_blank" class="highlight-link">Aleksander Pantić</a>,
+                som är en stor källa till inspiration. Även David Goggins är en stor förebild när det gäller mentalitet.
             </p>
-
-
-            <h2 class="spaced-title">Andra viktiga förebilder</h2>
-            <p class="small-text">Personer som format min syn på mentalitet träning och dedikation:</p>
-            <div class="tag-container">
-                <span class="tag">Kai Greene</span>
-                <span class="tag">Arnold Schwarzenegger</span>
-                <span class="tag">Ronnie Coleman</span>
-                <span class="tag">Fouad Abiad</span>
-            </div>
         </div>
+
     </div>
 </div>
 
