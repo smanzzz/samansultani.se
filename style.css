@@ -29,32 +29,33 @@ body {
 
 .intro-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
-    align-items: start;
+    align-items: center;
     margin-bottom: 40px;
 }
 
-.left-profile-column {
+.left-image-column {
     text-align: left;
 }
 
-.right-content-column {
+.right-text-column {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .profile-pic-large {
     width: 100%;
-    max-width: 400px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50px;
+    max-width: 100%;
+    max-height: 600px;
+    aspect-ratio: auto;
+    border-radius: 30px;
     object-fit: cover;
     border: 5px solid white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s;
-    margin-bottom: 25px;
+    margin-bottom: 0;
     display: block;
 }
 
@@ -103,6 +104,7 @@ h3 {
     gap: 15px;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .btn {
@@ -154,9 +156,22 @@ h3 {
 
 
 .strava-section {
+    padding-left: 0;
+    padding-top: 0;
+    margin-top: 3rem;
+    text-align: center;
+}
 
-    padding-left: 20px;
-    padding-top: 80px;
+.strava-section h2 {
+    text-align: center;
+    display: inline-block;
+    border-left: none;
+    padding-left: 0;
+}
+
+.strava-section p {
+    max-width: 700px;
+    margin: 0 auto 1rem auto;
 }
 
 .strava-wrapper {
@@ -164,6 +179,7 @@ h3 {
     flex-wrap: wrap;
     gap: 25px;
     margin-top: 25px;
+    justify-content: center;
 }
 
 .strava-box {
@@ -259,7 +275,7 @@ iframe, img {
         gap: 30px;
     }
 
-    .left-profile-column {
+    .left-image-column {
         text-align: center;
     }
 
@@ -274,4 +290,84 @@ iframe, img {
     h1 {
         font-size: 2.5rem;
     }
+}
+
+
+/* Contact Form */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section h2 {
+    text-align: center;
+    display: inline-block;
+    border-left: none;
+    padding-left: 0;
+}
+
+.contact-section p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    color: #636e72;
+    line-height: 1.7;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2d3436;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #dfe6e9;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #2d3436;
+    background: #f8f9fa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #56bee4;
+    box-shadow: 0 0 0 4px rgba(86, 190, 228, 0.15);
+    background: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b2bec3;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    border: none;
+    margin-top: 0.5rem;
 }

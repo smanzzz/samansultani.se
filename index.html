@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saman Sultani - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>html { scroll-behavior: smooth; }</style>
 </head>
 <body>
 
@@ -14,11 +15,12 @@
 
         <div class="intro-grid">
 
-            <div class="left-profile-column">
-                <h1>Hej och välkommen, jag heter Saman</h1>
-
+            <div class="left-image-column">
                 <img src="profilbild.jpg" alt="Bild på mig" class="profile-pic-large">
+            </div>
 
+            <div class="right-text-column">
+                <h1>Hej och välkommen, jag heter Saman</h1>
                 <p class="bio">
                     Jag ser utvecklaryrket precis som hantverkaryrket, men skillnaden är att det inte finns några fysiska begränsningar.
                     Det enda som sätter gränsen är fantasin och beslutet att inte skriva kod.
@@ -26,41 +28,39 @@
                 <div class="links">
                     <a href="https://github.com/smanzzz" target="_blank" class="btn">GitHub</a>
                     <a href="https://linkedin.com/in/saman-sultani-a48534197" target="_blank" class="btn">LinkedIn</a>
-                    <a href="mailto:smanzhow@gmail.com" class="btn btn-primary">Maila mig</a>
+                    <a href="#kontakt" class="btn btn-primary">Maila mig</a>
                 </div>
             </div>
 
-            <div class="right-content-column">
+        </div>
 
-                <div class="strava-section">
-                    <h2>Vid sidan av koden</h2>
-                    <p>
-                        För att tala kroppens språk tror jag att man behöver röra på sig, därför har jag som rutin att jogga varje dag,
-                        oavsett väder. Det hjälper mig att rensa tankarna och göra resten av livet klarare och lättare.
-                    </p>
+        <div class="strava-section">
+            <h2>Vid sidan av koden</h2>
+            <p>
+                För att tala kroppens språk tror jag att man behöver röra på sig, därför har jag som rutin att jogga varje dag,
+                oavsett väder. Det hjälper mig att rensa tankarna och göra resten av livet klarare och lättare.
+            </p>
 
-                    <div class="strava-wrapper">
-                        <div class="strava-box">
-                            <p class="strava-label">Senaste aktiviteterna</p>
-                            <iframe
-                                    class="strava-widget"
-                                    src="https://www.strava.com/athletes/137156002/latest-rides/579de71fc0751a9cf396c79345c8e52843778a8f"
-                                    loading="lazy"
-                                    title="Senaste aktiviteter">
-                            </iframe>
-                        </div>
+            <div class="strava-wrapper">
+                <div class="strava-box">
+                    <p class="strava-label">Senaste aktiviteterna</p>
+                    <iframe
+                            class="strava-widget"
+                            src="https://www.strava.com/athletes/137156002/latest-rides/579de71fc0751a9cf396c79345c8e52843778a8f"
+                            loading="lazy"
+                            title="Senaste aktiviteter">
+                    </iframe>
+                </div>
 
-                        <div class="strava-box">
-                            <p class="strava-label">Veckans översikt</p>
-                            <iframe
-                                    class="strava-widget"
-                                    style="height: 160px;"
-                                    src="https://www.strava.com/athletes/137156002/activity-summary/579de71fc0751a9cf396c79345c8e52843778a8f"
-                                    loading="lazy"
-                                    title="Aktivitetssammanfattning">
-                            </iframe>
-                        </div>
-                    </div>
+                <div class="strava-box">
+                    <p class="strava-label">Veckans översikt</p>
+                    <iframe
+                            class="strava-widget"
+                            style="height: 160px;"
+                            src="https://www.strava.com/athletes/137156002/activity-summary/579de71fc0751a9cf396c79345c8e52843778a8f"
+                            loading="lazy"
+                            title="Aktivitetssammanfattning">
+                    </iframe>
                 </div>
             </div>
         </div> <hr class="divider">
@@ -122,6 +122,36 @@
                 <a href="https://aleksanderpantic.se" target="_blank" class="highlight-link">Aleksander Pantić</a>,
                 som är en stor källa till inspiration. Även David Goggins är en stor förebild när det gäller mentalitet.
             </p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="content-section full-width-section contact-section" id="kontakt">
+            <h2>Kontakta mig</h2>
+            <p>Har du en fråga, ett projekt eller bara vill säga hej? Fyll i formuläret nedan så återkommer jag så snart jag kan.</p>
+
+            <form class="contact-form" action="https://formsubmit.co/01143f622d3d1fd65d8ca4b4b714a6bd" method="POST">
+                <input type="hidden" name="_subject" value="Nytt meddelande från samansultani.se">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://samansultani.se">
+
+                <div class="form-group">
+                    <label for="name">Namn</label>
+                    <input type="text" id="name" name="name" placeholder="Ditt namn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-post</label>
+                    <input type="email" id="email" name="email" placeholder="Din e-postadress" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Meddelande</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Skriv ditt meddelande här..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">Skicka meddelande</button>
+            </form>
         </div>
 
     </div>
